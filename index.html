@@ -5,7 +5,7 @@
 </head>
 <body>
     <h1>Upload a File</h1>
-    <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+    <form id="uploadForm" action="http://foxyprot.org/upload" method="post" enctype="multipart/form-data">
         <input type="file" name="file" id="fileInput">
         <input type="submit" value="Submit">
     </form>
@@ -21,7 +21,7 @@
 
             var formData = new FormData(document.getElementById('uploadForm'));
 
-            fetch('/upload', {
+            fetch('http://foxyprot.org/upload', {
                 method: 'POST',
                 body: formData
             })
