@@ -21,7 +21,7 @@
 
             var formData = new FormData(document.getElementById('uploadForm'));
 
-            fetch('http://foxyprot.org/upload', {
+            fetch('/upload', {
                 method: 'POST',
                 body: formData
             })
