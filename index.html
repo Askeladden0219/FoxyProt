@@ -25,9 +25,11 @@
                 method: 'POST',
                 body: formData
             })
-            .then(response => response.text())  // Change this to get the response as text
+            .then(response => response.json())
             .then(data => {
-                console.log('Response:', data);  // Log the response
+                // Display the score
+                document.getElementById('scoreResult').style.display = 'block';
+                document.getElementById('scoreValue').innerText = 'Score: ' + data.score;
     // Rest of your code to handle the response
 })
 
